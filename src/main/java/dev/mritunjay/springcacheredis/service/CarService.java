@@ -12,4 +12,8 @@ public interface CarService {
 
     Car saveCar(Car car);
 
+    void deleteCar(int id);
+
+    void deleteAll();
+
 }

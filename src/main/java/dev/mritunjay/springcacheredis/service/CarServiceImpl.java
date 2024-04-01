@@ -32,4 +32,14 @@ public class CarServiceImpl implements CarService{
         Car savedCar = carRepository.save(car);
         return savedCar;
     }
+
+    @Override
+    public void deleteCar(int id) {
+        carRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAll() {
+        carRepository.deleteAll();
+    }
 }

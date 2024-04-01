@@ -48,6 +48,10 @@ public class CarController {
     @DeleteMapping("/car/{id}")
     public Car deleteCar(@PathVariable("id") int id){
 //        Call service to delete the item from db
-        return null;
+//        return null;
+
+        Car c = carService.getCar(id);
+        carService.deleteCar(id);
+        return c;
     }
 }
